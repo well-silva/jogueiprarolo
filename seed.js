@@ -4,9 +4,9 @@ const User = require('./src/app/model/User');
 const Product = require('./src/app/model/Product');
 const File = require('./src/app/model/File');
 
-let totalProducts = 10;
+let totalProducts = 20;
 let usersIds = [];
-let totalUsers = 3;
+let totalUsers = 20;
 
 async function createUsers() {
   const users = [];

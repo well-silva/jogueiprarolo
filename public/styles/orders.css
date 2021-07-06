@@ -1,0 +1,31 @@
+.order-success,
+.order-failed {
+  padding: 0;
+  padding-bottom: 112px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.order-success .success-lottie,
+.order-failed .failed-lottie{
+  height: 400px;
+}
+
+.order-success h2,
+.order-failed h2 {
+  font-size: 42px;
+}
+
+.order-success p,
+.order-failed p {
+  font-size: 32px;
+  margin: 8px 0;
+}
+
+.order-success a,
+.order-failed a {
+  font-size: 24px;
+  color: var(--primary-color);
+}

@@ -1,6 +1,3 @@
-DROP DATABASE IF EXISTS launchstoredb;
-CREATE DATABASE launchstoredb;
-
 CREATE TABLE "products" (
   "id" SERIAL PRIMARY KEY,
   "category_id" int NOT NULL,
