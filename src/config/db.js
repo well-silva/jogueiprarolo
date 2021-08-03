@@ -5,5 +5,9 @@ module.exports = new Pool({
   password: 'Mariana27',
   host: 'localhost',
   port: 5432,
-  database: 'launchstoredb'
+  database: 'launchstoredb',
+  dialect: "postgres",
+  define: {
+    timestamps: true,
+  }
 })

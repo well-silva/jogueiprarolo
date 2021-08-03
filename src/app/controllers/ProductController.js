@@ -3,7 +3,7 @@ const Category = require('../model/Category')
 const Product = require('../model/Product')
 const File = require('../model/File');
 const LoadProductService = require('../services/LoadProductService');
-
+ 
 module.exports = {
   async create(req, res) {
     try {

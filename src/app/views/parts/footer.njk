@@ -1,3 +1,30 @@
-<footer>© Copyright JOGUEI PRA ROLO</footer>
+<footer>
+  <div class="container-footer">
+    <div class="info_footer">
+      © Copyright JOGUEI PRA ROLO
+    </div>
+    <div class="redes_sociais">
+      <p>SIGA-NOS</p>
+      <div class="icons">
+        <i class="fab fa-instagram-square"></i>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-youtube-square"></i>
+      </div>
+    </div>
+  </div>
+</footer>
 
+<script src="https://kit.fontawesome.com/ec9d5a5a90.js" crossorigin="anonymous"></script>
 <script src="/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+  const config = {
+    type: 'carousel',
+    perView: 1,
+  }
+
+  new Glide('.glide', config).mount()
+
+</script>

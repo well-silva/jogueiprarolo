@@ -1,0 +1,68 @@
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <a class="close-modal">
+        <i class="material-icons">close</i>
+      </a>
+      <div class="modal-content">
+        <h1>Envie uma proposta</h1>
+
+        <p>Produto: {{product.name}}</p>
+          <form action="/users/proposal" method="POST">
+
+              <div class="input-grup">
+                <div class="item">
+                  <label for="valueProposal">Valor da proposta:</label>
+                  <input type="text" name="valueProposal" min="0" id="" onkeydown="Mask.apply(this, 'formatBRL')">
+                </div>
+
+                <div class="item">
+                  <label for="phone-contact">Telefone para contato:</label>
+                  <input name="phoneContact" type="text" >
+                </div>
+              </div>
+
+              <div class="item">
+                <label for="message">Mensagem:</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+              </div>
+
+              <fieldset>
+                <legend>Endereço:</legend>
+                <div class="input-grup">
+                  <div class="item">
+                    <label>Cep:</label>
+                     <input id="cep" name="cep" type="text" axlength="9" onkeydown="Mask.apply(this, 'cep')"
+                      onblur="Validate.apply(this, 'isCep')" />
+                  </div>
+
+                  <div class="item">
+                    <label>Rua:</label>
+                    <input name="rua" type="text" id="rua" />
+                  </div>
+                </div>
+              
+                 <div class="input-grup-tree">
+                    <div class="item">
+                      <label>Bairro:</label>
+                      <input name="bairro" type="text" id="bairro"/>
+                    </div>
+
+                    <div class="item">
+                      <label>Cidade:</label>
+                      <input name="cidade" type="text" id="cidade"/>
+                    </div>
+
+                    <div class="item">
+                      <label>Estado:</label>
+                      <input name="estado" type="text" id="estado"/>
+                    </div>
+                </div>
+              </fieldset>
+
+              <input type="hidden" name="id" value="{{product.id}}">
+              <button type="submit" class="button">Enviar proposta</button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -18,6 +18,7 @@ function checkAllFields(body) {
 module.exports = {
   async show(req, res, next) {
     const { userId: id } = req.session
+    console.log(req.session)
   
     const user = await User.findOne({ where: {id} })
   
@@ -26,6 +27,8 @@ module.exports = {
     })
   
     req.user = user
+
+    console.log(user)
   
     next()
   },

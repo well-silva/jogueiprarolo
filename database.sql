@@ -12,6 +12,7 @@ CREATE TABLE "products" (
   "updated_at" timestamp DEFAULT (now())
 );
 
+
 CREATE TABLE "categories" (
   "id" SERIAL PRIMARY KEY,
   "name" text NOT NULL

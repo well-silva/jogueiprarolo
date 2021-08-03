@@ -4,6 +4,10 @@
 
 }
 
+.content{
+  margin-top: 100px;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -26,7 +30,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 940px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -42,7 +46,6 @@ footer {
   padding: 12px 16px;
   width: 100%;
   border-radius: 4px;
-  /* para colocar o botao para baixo */
   align-self: end;
   font-weight: bold;
   text-transform: uppercase;
@@ -54,6 +57,8 @@ footer {
 
 .button:hover {
   background-color: #d7780b;
+  text-decoration: none;
+  color: white;
 }
 
 .button.edit {
@@ -72,23 +77,102 @@ footer {
   background-color: rgb(218, 47, 47);
 }
 
-header, footer {
+header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding-top: 16px;
+  text-align: center;
+  position: fixed;
+  z-index: 99;
+}
+
+ footer {
   background-color: black;
   color: white;
   width: 100%;
   padding: 32px 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
+.container-footer {
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.container-footer .redes_sociais {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+}
+
+.icons {
+  font-size: 32px;
+  margin-top: 4px;
+}
+
+.icons i{
+  transition: all 200ms;
+}
+
+
+.icons i:hover{
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
 
 header div.container {
   display: grid;
-  grid-template-columns: 220px auto 280px;
+  grid-template-columns: 100px auto 280px;
   align-items: center;
   grid-gap: 24px;
 }
 
 header div.container a {
   justify-self: start;
+}
+
+.menu ul{
+  display: flex;
+  padding: 16px 0;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul li{
+  margin-right: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu ul li a{
+  color: white;
+  position: relative;
+}
+
+.menu ul li a:hover{
+  color: var(--primary-color);
+}
+
+.menu ul li a::after{
+  content: "";
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.menu ul li a:hover::after{
+  width: 100%;
+  transition: width 400ms ease-in-out;
 }
 
 .logo {
@@ -99,8 +183,7 @@ header div.container a {
 }
 
 .logo img {
-  width: 200px;
-  height: 50px;
+  height: 40px;
   object-fit: contain;
 }
 
@@ -117,6 +200,13 @@ header div.container a {
   padding: 8px 16px;
   border-radius: 2px;
   font-size: 16px;
+
+  transition: all 100ms;
+}
+
+.search input:focus {
+  outline: none;
+  box-shadow: 0 0 6px 2px var(--primary-color);
 }
 
 nav.primary ul {
@@ -127,13 +217,13 @@ nav.primary ul {
 nav.primary ul li a{
   display: flex;
   align-items: center;
-
+  
   color: white;
 }
 
 nav.primary ul li a:hover {
   color: var(--primary-color);
-
+  text-decoration: none;
   transition: 200ms;
 }
 
@@ -297,8 +387,12 @@ form .item #photos-preview img{
 }
 
 /*SHOP*/
+.shop {
+  margin-bottom: 32px;
+}
+
 .shop h2{
-  margin: 48px 0;
+  margin: 32px 0 16px;
 }
 
 .shop .items {
@@ -313,7 +407,7 @@ form .item #photos-preview img{
 
 .shop .product .image {
   padding-top: 56.25%;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }

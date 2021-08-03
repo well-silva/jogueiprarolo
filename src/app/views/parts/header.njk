@@ -3,7 +3,7 @@
   <div class="container">
     <a href="/">
       <div class="logo">
-        <img src="/assets/logo.png" alt="">
+        <img src="/assets/NovoProjeto.png" alt="">
       </div>
     </a>
 
@@ -11,7 +11,7 @@
       <input 
         type="text" 
         name="filter" 
-        placeholder="Buscar por Produtos"
+        placeholder="Digite o que você procura"
         {% if search.term %}
           value="{{ search.term }}"
         {% endif%}
@@ -40,6 +40,9 @@
                 <a href="/users/ads">Meus anúncios</a>
               </li>
               <li>
+                <a href="/users/proposal">Minhas propostas</a>
+              </li>
+              <li>
                 <form action="/users/logout" method="POST">
                   <button>Sair</button>
                 </form>
@@ -49,6 +52,15 @@
         </li>
       </ul>
     </nav>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="/products/search?filter=PLAYSTATION">PLAYSTATION</a></li>
+      <li><a href="/products/search?filter=X-BOX">X-BOX</a></li>
+      <li><a href="/products/search?filter=NINTENDO">NINTENDO</a></li>
+      <li><a href="/products/search?filter=CLÁSSICOS">CLÁSSICOS</a></li>
+    </ul>
   </div>
 
 </header>

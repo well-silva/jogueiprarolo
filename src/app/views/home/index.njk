@@ -1,6 +1,11 @@
 {% extends "layout.njk"%}
-{% import "parts/section-products.njk" as section %}
-
+{% import "parts/section-products.njk" as section %} 
 {% block content %}
-  {{section.products('Ultimos produtos', 'container', products)}}
+
+  {% include "parts/carousel.njk" %}
+
+  {{section.products('ÚLTIMOS PRODUTOS', 'container', products)}}
+  {{section.products('CONSOLES', 'container', consoles)}}
+  {{section.products('JOGOS', 'container', games)}}
+  
 {% endblock content %}

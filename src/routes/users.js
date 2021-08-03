@@ -4,6 +4,7 @@ const routes = express.Router()
 const SessionController = require("../app/controllers/SessionController")
 const UserController = require("../app/controllers/UserController")
 const OrderController = require("../app/controllers/OrderController")
+const ProposalController = require('../app/controllers/ProposalController')
 
 const UserValidator = require('../app/validators/user')
 const SessionValidator = require('../app/validators/session')
@@ -25,6 +26,9 @@ routes.post('/register', UserValidator.post, UserController.post)
 routes.get('/', onlyUsers, UserValidator.show, UserController.show)
 routes.put('/', UserValidator.update, UserController.update)
 routes.delete('/', UserController.delete)
+
+routes.post('/proposal', ProposalController.post)
+routes.get('/proposal', ProposalController.proposalList)
 
 routes.get('/ads', UserController.ads)
 routes.post('/orders', onlyUsers, OrderController.post)

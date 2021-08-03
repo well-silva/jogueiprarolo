@@ -5,6 +5,11 @@
   width: 90%;
 }
 
+.card-header {
+  background: white;
+  border: none;
+}
+
 .card-header h3 {
   font-size: 14px;
   line-height: 24px;

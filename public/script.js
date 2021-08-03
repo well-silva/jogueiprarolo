@@ -264,3 +264,29 @@ const Validate = {
     }
   }
 }
+
+const modalOverlay = document.querySelector('.modal-overlay')
+const btnProposal = document.getElementById('btn-proposal')
+const btnCloseModal = document.querySelector('.close-modal')
+
+btnProposal.addEventListener('click', () => {
+  modalOverlay.classList.add('active')
+})
+
+btnCloseModal.addEventListener('click', () => {
+  modalOverlay.classList.remove('active')
+})
+
+async function onBlurCep() {
+  const cep = document.getElementById('cep')
+  const { data } = await axios.get(`https://viacep.com.br/ws/${cep.value}/json/`)
+
+  document.getElementById('bairro').value = data.bairro
+  document.getElementById('rua').value = data.logradouro
+  document.getElementById('cidade').value = data.localidade
+  document.getElementById('estado').value = data.uf
+
+}
+
+const cep = document.getElementById('cep')
+cep.addEventListener('blur', onBlurCep)

@@ -73,10 +73,12 @@
             {% elseif product.quantity == 0 %}
               <p class="unavailable">Fora de estoque</p>
             {% else %}
-              <form action="/users/orders" method="POST">
+              <form  action="/users/orders" method="POST">
                 <input type="hidden" name="id" value="{{product.id}}">
-                <button class="button">Comprar</button>
+                <button class="button" id="btn-buy">Comprar</button>
               </form>
+              <button class="button" id="btn-proposal">Fazer proposta</button>
+
             {% endif %}
           </div>
         {% endif %}
@@ -84,4 +86,8 @@
       </div>
     </div>
   {% endcall %}
+
+    {% include "parts/modal.njk" %}
+
 {% endblock content %}
+
